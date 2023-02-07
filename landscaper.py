@@ -10,7 +10,8 @@ tools = [
     {"name": "Teeth", "profit": 1, "cost": 0},
     {"name": "Rusty Scissors", "profit": 5, "cost": 5},
     {"name": "Old-Timey Push Lawnmower", "profit": 50, "cost": 25},
-    {"name": "Fancy Battery Powered Lawnmower", "profit": 100, "cost": 250}
+    {"name": "Fancy Battery Powered Lawnmower", "profit": 100, "cost": 250},
+    {"name": "Team of Starving Students", "profit": 250, "cost": 500}
 ]
 
 ########################
