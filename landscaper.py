@@ -31,6 +31,29 @@ def check_stats():
     # Print the message about the player's tool and money
     print(f"You currently have ${game['money']} and are using a {tool['name']}")
     
+# This function allows the player to upgrade their tool
+def upgrade():
+    # Check if there are no more upgrades available
+    if (game["tool"]) >= len(tools) - 1:
+        print("No more upgrades available")
+        return 0
+    # Get the next tool the player can upgrade to
+    next_tool = tools[game["tool"]+1]
+    # Check if the next tool is not availabe
+    if (next_tool == None):
+        print("There are no more tools")
+        return 0
+    # Check if the player has enough money to upgrade
+    if (game["money"] < next_tool["cost"]):
+        print("Not enough to buy tool")
+        return 0
+    # Print the message about upgrading the tool
+    print("You are upgrading your tool")
+    # Deduct the cost of the upgrade from the player's money
+    game["money"] -= next_tool["cost"]
+    # Increase the player's tool to the next level
+    game["tool"] += 1
+    
 
 #############
 # Game Loop #
@@ -38,11 +61,13 @@ def check_stats():
 
 while(True):
     # Prompt the player to choose an option
-    user_choice = input("[1] Mow Lawn [2] Check Stats [3] Upgrade [Q] Quit")
+    user_choice = input("[1] Mow Lawn [2] Check Stats [3] Upgrade [4] Quit")
     # Execute the chosen option
     if(user_choice == "1"):
         mow_lawn()
     if(user_choice == "2"):
         check_stats()
-    if(user_choice == "Q"):
+    if(user_choice == "3"):
+        upgrade()
+    if(user_choice == "4"):
         break
