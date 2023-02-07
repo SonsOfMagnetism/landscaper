@@ -8,7 +8,8 @@ game = {"tool": 0, "money": 0}
 # This is a list of tools the player can use
 tools = [
     {"name": "Teeth", "profit": 1, "cost": 0},
-    {"name": "Rusty Scissors", "profit": 5, "cost": 5}
+    {"name": "Rusty Scissors", "profit": 5, "cost": 5},
+    {"name": "Old-Timey Push Lawnmower", "profit": 50, "cost": 25}
 ]
 
 ########################
