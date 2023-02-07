@@ -56,8 +56,15 @@ def upgrade():
     game["money"] -= next_tool["cost"]
     # Increase the player's tool to the next level
     game["tool"] += 1
-    
 
+# This function checks if the player has won the game
+def win_check():
+    # Check if the player has upgraded the tool and has at least $1000
+    if(game["money"] >= 1000):
+        print("You Win")
+        return True
+    return False
+    
 #############
 # Game Loop #
 #############
@@ -73,4 +80,7 @@ while(True):
     if(user_choice == "3"):
         upgrade()
     if(user_choice == "4"):
+        print("You quit the game")
+        break
+    if(win_check()):
         break
