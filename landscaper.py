@@ -22,8 +22,8 @@ tools = [
 def mow_lawn():
     # Get the current tool being used by the player
     tool = tools[game["tool"]]
-    # Print the message about cleaning a pool and make money
-    print(f"You clean a pool with your {tool['name']} and make ${tool['profit']}")
+    # Print the message about mowing a lawn and making money
+    print(f"You mowed a lawn with your {tool['name']} and make ${tool['profit']}")
     # Update the player's money
     game["money"] += tool["profit"]
     
